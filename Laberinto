@@ -11,3 +11,6 @@ laberinto_original = [
 ]
 
 matriz_salida = [fila[:] for fila in laberinto_original]
+
+FILA_INICIO, COL_INICIO = 8, 0
+FILA_FIN, COL_FIN = 0, 0
