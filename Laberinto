@@ -27,3 +27,5 @@ def resolver_laberinto(f, c, vidas):
     # 1. Validar límites del tablero
     if f < 0 or f >= 9 or c < 0 or c >= 9:
         return False
+    if laberinto_original[f][c] == 0 or (f, c) in visitados:
+        return False
