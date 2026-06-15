@@ -22,3 +22,8 @@ def imprimir_matriz(matriz):
     for fila in matriz:
         print("\t".join(map(str, fila)))
     print()
+
+def resolver_laberinto(f, c, vidas):
+    # 1. Validar límites del tablero
+    if f < 0 or f >= 9 or c < 0 or c >= 9:
+        return False
