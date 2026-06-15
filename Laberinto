@@ -29,3 +29,9 @@ def resolver_laberinto(f, c, vidas):
         return False
     if laberinto_original[f][c] == 0 or (f, c) in visitados:
         return False
+    daño = 0
+    celda = laberinto_original[f][c]
+    if celda == -1:
+        daño = 1
+    elif celda == -2:
+        daño = 2
