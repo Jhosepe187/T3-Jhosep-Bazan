@@ -42,3 +42,7 @@ def resolver_laberinto(f, c, vidas):
     vidas_restantes = vidas - daño
 
     print(f"Ratón se mueve a ({f}, {c}) | Celda: {celda} | Vidas restantes: {vidas_restantes}")
+
+    if f == FILA_FIN and c == COL_FIN:
+        matriz_salida[f][c] = 'X'
+        return True
