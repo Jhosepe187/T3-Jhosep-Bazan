@@ -14,3 +14,11 @@ matriz_salida = [fila[:] for fila in laberinto_original]
 
 FILA_INICIO, COL_INICIO = 8, 0
 FILA_FIN, COL_FIN = 0, 0
+
+visitados = set()
+
+def imprimir_matriz(matriz):
+    """Función auxiliar para mostrar las matrices limpias en consola."""
+    for fila in matriz:
+        print("\t".join(map(str, fila)))
+    print()
