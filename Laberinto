@@ -48,7 +48,7 @@ def resolver_laberinto(f, c, vidas):
         return True
     
     visitados.add((f, c))
-    
+
     matriz_salida[f][c] = 'X'
     movimientos = [
         (1, 0),   # Abajo
@@ -56,3 +56,7 @@ def resolver_laberinto(f, c, vidas):
         (-1, 0),  # Arriba
         (0, -1)   # Izquierda
     ]
+
+    for df, dc in movimientos:
+        if resolver_laberinto(f + df, c + dc, vidas_restantes):
+            return True
