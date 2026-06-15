@@ -60,3 +60,7 @@ def resolver_laberinto(f, c, vidas):
     for df, dc in movimientos:
         if resolver_laberinto(f + df, c + dc, vidas_restantes):
             return True
+    
+    visitados.remove((f, c))
+    matriz_salida[f][c] = laberinto_original[f][c]  # Restauramos el valor original
+    return False
