@@ -64,3 +64,17 @@ def resolver_laberinto(f, c, vidas):
     visitados.remove((f, c))
     matriz_salida[f][c] = laberinto_original[f][c]  # Restauramos el valor original
     return False
+
+print("LABERINTO ORIGINAL: ")
+imprimir_matriz(laberinto_original)
+print(" ")
+print("AVANCE PASO A PASO: ")
+exito = resolver_laberinto(FILA_INICIO, COL_INICIO, 3)
+print(" ")
+print("RESULTADO: ")
+if exito:
+    print("¡El ratón logró salir con vida!")
+    print("\nMATRIZ CON EL CAMINO DE SALIDA (X)")
+    imprimir_matriz(matriz_salida)
+else:
+    print("El ratón no logró encontrar un camino viable y se quedó sin vidas.")
