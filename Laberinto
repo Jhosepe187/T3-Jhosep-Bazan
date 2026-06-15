@@ -48,4 +48,11 @@ def resolver_laberinto(f, c, vidas):
         return True
     
     visitados.add((f, c))
+    
     matriz_salida[f][c] = 'X'
+    movimientos = [
+        (1, 0),   # Abajo
+        (0, 1),   # Derecha
+        (-1, 0),  # Arriba
+        (0, -1)   # Izquierda
+    ]
