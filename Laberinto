@@ -9,3 +9,5 @@ laberinto_original = [
     [ 1,  0,  0,  1,  0,  1,  0,  1,  0],
     ['I',  1, -1,  1,  1,  1,  0,  1,  1]
 ]
+
+matriz_salida = [fila[:] for fila in laberinto_original]
