@@ -46,3 +46,6 @@ def resolver_laberinto(f, c, vidas):
     if f == FILA_FIN and c == COL_FIN:
         matriz_salida[f][c] = 'X'
         return True
+    
+    visitados.add((f, c))
+    matriz_salida[f][c] = 'X'
