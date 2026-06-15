@@ -40,3 +40,5 @@ def resolver_laberinto(f, c, vidas):
         return False
     
     vidas_restantes = vidas - daño
+
+    print(f"Ratón se mueve a ({f}, {c}) | Celda: {celda} | Vidas restantes: {vidas_restantes}")
