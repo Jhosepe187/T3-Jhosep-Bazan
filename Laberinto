@@ -35,6 +35,8 @@ def resolver_laberinto(f, c, vidas):
         daño = 1
     elif celda == -2:
         daño = 2
-        
+
     if vidas - daño <= 0:
         return False
+    
+    vidas_restantes = vidas - daño
